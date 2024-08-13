@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Meminta input dari pengguna
+
+read -p "Masukan interval ping (dalam milidetik): " interval
+read -p "Masukkan ukuran paket (dalam byte): " size
+read -p "Masukan ip target: " domain
+
+# Menjalankan perintah ping dengan input pengguna
+echo "Menjalankan ping ke $domain dengan ukuran paket $size byte dan interval $interval detik..."
+ping -i "$interval" -s "$size"  "$domain" 
